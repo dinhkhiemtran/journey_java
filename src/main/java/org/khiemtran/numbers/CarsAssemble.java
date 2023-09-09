@@ -7,6 +7,7 @@ import java.util.stream.IntStream;
 
 public class CarsAssemble {
   private static final int PRODUCED_EACH_HOUR = 221;
+  private static final int PER_MINUTE = 60;
   private Map<Integer, Double> SUCCESS_RATE;
 
   public CarsAssemble() {
@@ -29,6 +30,6 @@ public class CarsAssemble {
   }
 
   public int workingItemsPerMinute(int speed) {
-    return (int) productionRatePerHour(speed) / 60;
+    return (int) productionRatePerHour(speed) / PER_MINUTE;
   }
 }
