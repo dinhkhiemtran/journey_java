@@ -4,14 +4,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LogLevels {
+  private static Pattern pattern = Pattern.compile("(\\w+)\\]\\:(.[^\\\\]+)");
+
   public static String message(String logLine) {
-    Pattern pattern = Pattern.compile("\\s(.[^\\\\]+)");
     Matcher matcher = pattern.matcher(logLine);
-    return matcher.find() ? matcher.group(1).trim() : "";
+    return matcher.find() ? matcher.group(2).trim() : "";
   }
 
   public static String logLevel(String logLine) {
-    Pattern pattern = Pattern.compile("(\\w+)");
     Matcher matcher = pattern.matcher(logLine);
     return matcher.find() ? matcher.group(1).toLowerCase().trim() : "";
   }
