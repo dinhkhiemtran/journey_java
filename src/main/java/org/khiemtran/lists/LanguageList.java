@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LanguageList {
-  private final String JAVA_LANGUAGE = "Java";
-  private final String KOTLIN_LANGUAGE = "Kotlin";
+  private static final String JAVA_LANGUAGE = "Java";
+  private static final String KOTLIN_LANGUAGE = "Kotlin";
   private final List<String> languages;
 
   public LanguageList() {

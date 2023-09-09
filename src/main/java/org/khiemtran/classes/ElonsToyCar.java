@@ -1,9 +1,9 @@
 package org.khiemtran.classes;
 
 public class ElonsToyCar {
-  private final int DISTANCE_DRIVEN = 20;
-  private final String STATE_OUT_OF_BATTERY = "Battery empty";
-  private final int RUN_OUT_OF_BATTERY = 0;
+  private static final int DISTANCE_DRIVEN = 20;
+  private static final String STATE_OUT_OF_BATTERY = "Battery empty";
+  private static final int RUN_OUT_OF_BATTERY = 0;
   private int meters;
   private int battery;
 

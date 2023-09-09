@@ -3,9 +3,9 @@ package org.khiemtran.arrays;
 import java.util.Arrays;
 
 public class BirdWatcher {
-  private final int FIVE_BIRD_IN_DAY = 5;
+  private static final int FIVE_BIRD_IN_DAY = 5;
 
-  private final int ZERO_BIRD_IN_DAY = 0;
+  private static final int ZERO_BIRD_IN_DAY = 0;
   private final int[] birdsPerDay;
   private int indexOfOldestDay;
 

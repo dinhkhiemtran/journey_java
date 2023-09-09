@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class Blackjack {
   private static final int BLACK_JACK = 21;
-  private final String STAND = "S";
-  private final String HIT = "H";
-  private final String SPLIT = "P";
-  private final String WIN = "W";
+  private static final String STAND = "S";
+  private static final String HIT = "H";
+  private static final String SPLIT = "P";
+  private static final String WIN = "W";
   private static Map<String, Integer> cards = new HashMap<>();
 
   static {
@@ -46,7 +46,6 @@ public class Blackjack {
   public String firstTurn(String card1, String card2, String dealerCard) {
     int handScore = parseCard(card1) + parseCard(card2);
     int dealerScore = parseCard(dealerCard);
-
     if (20 < handScore) {
       return largeHand(isBlackjack(card1, card2), dealerScore);
     } else {

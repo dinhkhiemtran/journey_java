@@ -1,8 +1,8 @@
 package org.khiemtran.basic;
 
 public class Lasagna {
-  private final int MINUTES_IN_OVEN = 40;
-  private final int MINUTES_TO_PREPARE = 2;
+  private static final int MINUTES_IN_OVEN = 40;
+  private static final int MINUTES_TO_PREPARE = 2;
 
   public int expectedMinutesInOven() {
     return MINUTES_IN_OVEN;
