@@ -20,7 +20,7 @@ public class CarsAssemble {
                 value <= 8 ? 0.9 :
                     value == 9 ? 0.8 :
                         0.77,
-            (oldValue, newValue) -> newValue,
+            (existing, replacement) -> existing,
             HashMap::new
         ));
   }
