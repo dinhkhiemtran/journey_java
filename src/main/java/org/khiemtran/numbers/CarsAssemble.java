@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class CarsAssemble {
   private static final int PRODUCED_EACH_HOUR = 221;
   private static final int PER_MINUTE = 60;
-  private Map<Integer, Double> SUCCESS_RATE;
+  private final Map<Integer, Double> SUCCESS_RATE;
 
   public CarsAssemble() {
     SUCCESS_RATE = IntStream

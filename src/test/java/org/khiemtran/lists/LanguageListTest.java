@@ -18,10 +18,10 @@ class LanguageListTest {
     languageList.addLanguage("Java");
     languageList.addLanguage("Ruby");
     languageList.addLanguage("C++");
-    Assertions.assertEquals(true, languageList.containsLanguage("Java"));
-    Assertions.assertEquals(true, languageList.containsLanguage("Ruby"));
-    Assertions.assertEquals(true, languageList.containsLanguage("C++"));
-    Assertions.assertEquals(false, languageList.containsLanguage("Python"));
+    Assertions.assertTrue(languageList.containsLanguage("Java"));
+    Assertions.assertTrue(languageList.containsLanguage("Ruby"));
+    Assertions.assertTrue(languageList.containsLanguage("C++"));
+    Assertions.assertFalse(languageList.containsLanguage("Python"));
   }
 
   @Test
@@ -41,19 +41,19 @@ class LanguageListTest {
   public void excitingLanguageListWithKotlin() {
     languageList.addLanguage("Python");
     languageList.addLanguage("Kotlin");
-    Assertions.assertEquals(true, languageList.isExciting());
+    Assertions.assertTrue(languageList.isExciting());
   }
 
   @Test
   public void addOneLanguage() {
     languageList.addLanguage("Java");
-    Assertions.assertEquals(true, languageList.containsLanguage("Java"));
-    Assertions.assertEquals(false, languageList.containsLanguage("Python"));
+    Assertions.assertTrue(languageList.containsLanguage("Java"));
+    Assertions.assertFalse(languageList.containsLanguage("Python"));
   }
 
   @Test
   public void empty() {
-    Assertions.assertEquals(true, languageList.isEmpty());
+    Assertions.assertTrue(languageList.isEmpty());
   }
 
   @Test
@@ -69,13 +69,13 @@ class LanguageListTest {
     languageList.addLanguage("Python");
     languageList.addLanguage("Ruby");
     languageList.addLanguage("C++");
-    Assertions.assertEquals(false, languageList.isExciting());
+    Assertions.assertFalse(languageList.isExciting());
   }
 
   @Test
   public void excitingLanguageListWithJava() {
     languageList.addLanguage("Java");
-    Assertions.assertEquals(true, languageList.isExciting());
+    Assertions.assertTrue(languageList.isExciting());
   }
 
   @Test
@@ -84,14 +84,14 @@ class LanguageListTest {
     languageList.addLanguage("Python");
     languageList.addLanguage("Ruby");
     languageList.removeLanguage("Python");
-    Assertions.assertEquals(true, languageList.containsLanguage("Java"));
-    Assertions.assertEquals(false, languageList.containsLanguage("Python"));
-    Assertions.assertEquals(true, languageList.containsLanguage("Ruby"));
+    Assertions.assertTrue(languageList.containsLanguage("Java"));
+    Assertions.assertFalse(languageList.containsLanguage("Python"));
+    Assertions.assertTrue(languageList.containsLanguage("Ruby"));
   }
 
   @Test
   public void nonEmpty() {
     languageList.addLanguage("Java");
-    Assertions.assertEquals(false, languageList.isEmpty());
+    Assertions.assertFalse(languageList.isEmpty());
   }
 }

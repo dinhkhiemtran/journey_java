@@ -14,7 +14,7 @@ class BlackjackTest {
 
   @Test
   public void blackjackWithKingAceSecond() {
-    Assertions.assertEquals(true, blackjack.isBlackjack("king", "ace"));
+    Assertions.assertTrue(blackjack.isBlackjack("king", "ace"));
   }
 
   @Test
@@ -94,7 +94,7 @@ class BlackjackTest {
 
   @Test
   public void blackjackWithJackAceSecond() {
-    Assertions.assertEquals(true, blackjack.isBlackjack("jack", "ace"));
+    Assertions.assertTrue(blackjack.isBlackjack("jack", "ace"));
   }
 
   @Test
@@ -114,7 +114,7 @@ class BlackjackTest {
 
   @Test
   public void noBlackjackWithTwoFigures() {
-    Assertions.assertEquals(false, blackjack.isBlackjack("queen", "jack"));
+    Assertions.assertFalse(blackjack.isBlackjack("queen", "jack"));
   }
 
   @Test
@@ -149,7 +149,7 @@ class BlackjackTest {
 
   @Test
   public void noBlackjackWithKingAndFive() {
-    Assertions.assertEquals(false, blackjack.isBlackjack("king", "five"));
+    Assertions.assertFalse(blackjack.isBlackjack("king", "five"));
   }
 
   @Test
@@ -159,7 +159,7 @@ class BlackjackTest {
 
   @Test
   public void blackjackWithTenAceSecond() {
-    Assertions.assertEquals(true, blackjack.isBlackjack("ten", "ace"));
+    Assertions.assertTrue(blackjack.isBlackjack("ten", "ace"));
   }
 
   @Test
@@ -174,7 +174,7 @@ class BlackjackTest {
 
   @Test
   public void noBlackjackWithTwoAces() {
-    Assertions.assertEquals(false, blackjack.isBlackjack("ace", "ace"));
+    Assertions.assertFalse(blackjack.isBlackjack("ace", "ace"));
   }
 
   @Test
@@ -209,7 +209,7 @@ class BlackjackTest {
 
   @Test
   public void blackjackWithQueenAceSecond() {
-    Assertions.assertEquals(true, blackjack.isBlackjack("queen", "ace"));
+    Assertions.assertTrue(blackjack.isBlackjack("queen", "ace"));
   }
 
   @Test
@@ -259,7 +259,7 @@ class BlackjackTest {
 
   @Test
   public void noBlackjackWithEightAndFive() {
-    Assertions.assertEquals(false, blackjack.isBlackjack("eight", "five"));
+    Assertions.assertFalse(blackjack.isBlackjack("eight", "five"));
   }
 
   @Test
@@ -274,11 +274,11 @@ class BlackjackTest {
 
   @Test
   public void noBlackjackWithFive() {
-    Assertions.assertEquals(false, blackjack.isBlackjack("ace", "five"));
+    Assertions.assertFalse(blackjack.isBlackjack("ace", "five"));
   }
 
   @Test
   public void noBlackjackWithNine() {
-    Assertions.assertEquals(false, blackjack.isBlackjack("ace", "nine"));
+    Assertions.assertFalse(blackjack.isBlackjack("ace", "nine"));
   }
 }

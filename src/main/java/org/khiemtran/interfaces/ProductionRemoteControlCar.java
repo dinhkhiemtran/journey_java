@@ -1,5 +1,7 @@
 package org.khiemtran.interfaces;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class ProductionRemoteControlCar implements RemoteControlCar, Comparable<ProductionRemoteControlCar> {
   private int units;
   private int distanceTravelled;

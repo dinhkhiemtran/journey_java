@@ -13,7 +13,7 @@ class FighterTest {
   @Test
   public void testFighterVulnerableByDefault() {
     Fighter warrior = new Warrior();
-    Assertions.assertEquals(false, warrior.isVulnerable());
+    Assertions.assertFalse(warrior.isVulnerable());
   }
 
   @Test
@@ -43,8 +43,8 @@ class FighterTest {
   @Test
   public void testWizardVulnerable() {
     Wizard wizard = new Wizard();
-    Assertions.assertEquals(true, wizard.isVulnerable());
+    Assertions.assertTrue(wizard.isVulnerable());
     wizard.prepareSpell();
-    Assertions.assertEquals(false, wizard.isVulnerable());
+    Assertions.assertFalse(wizard.isVulnerable());
   }
 }

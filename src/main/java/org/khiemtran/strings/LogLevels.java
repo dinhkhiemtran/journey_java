@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LogLevels {
-  private static Pattern pattern = Pattern.compile("(\\w+)\\]\\:(.[^\\\\]+)");
+  private static final Pattern pattern = Pattern.compile("(\\w+)\\W+(.[^\\\\]+)");
 
   public static String message(String logLine) {
     Matcher matcher = pattern.matcher(logLine);

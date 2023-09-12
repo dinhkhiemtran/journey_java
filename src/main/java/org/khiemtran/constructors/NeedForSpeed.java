@@ -5,8 +5,8 @@ public class NeedForSpeed {
   private static final int BATTERY_DRAIN = 4;
   private int meter;
   private int battery;
-  private int speed;
-  private int batteryDrain;
+  private final int speed;
+  private final int batteryDrain;
 
   public NeedForSpeed(int speed, int batteryDrain) {
     this.speed = speed;
@@ -31,13 +31,12 @@ public class NeedForSpeed {
   }
 
   public static NeedForSpeed nitro() {
-    NeedForSpeed car = new NeedForSpeed(SPEED_OF_METERS, BATTERY_DRAIN);
-    return car;
+    return new NeedForSpeed(SPEED_OF_METERS, BATTERY_DRAIN);
   }
 }
 
 class RaceTrack {
-  private int distance;
+  private final int distance;
 
   RaceTrack(int distance) {
     this.distance = distance;

@@ -7,7 +7,7 @@ public class BirdWatcher {
 
   private static final int ZERO_BIRD_IN_DAY = 0;
   private final int[] birdsPerDay;
-  private int indexOfOldestDay;
+  private final int indexOfOldestDay;
 
 
   public BirdWatcher(int[] birdsPerDay) {

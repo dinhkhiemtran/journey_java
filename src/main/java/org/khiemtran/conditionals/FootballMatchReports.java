@@ -15,7 +15,7 @@ public class FootballMatchReports {
   private static final String STRIKER = "striker";
   private static final String RIGHT_WING = "right wing";
   private static final String OUTSIDE_RANGE_NUMBER = "Shirt number outside range 1-11!";
-  private static Map<Integer, String> players;
+  private static final Map<Integer, String> players;
 
   static {
     players = IntStream.range(1, 12)

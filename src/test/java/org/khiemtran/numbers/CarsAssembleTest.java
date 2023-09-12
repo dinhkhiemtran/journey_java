@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CarsAssembleTest {
-  private static double EPSILON = 1.1102230246251565e-16d;
+  private static final double EPSILON = 1.1102230246251565e-16d;
   private CarsAssemble carsAssemble;
 
   @BeforeEach

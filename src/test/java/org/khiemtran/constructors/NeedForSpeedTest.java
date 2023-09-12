@@ -21,13 +21,13 @@ class NeedForSpeedTest {
     for (var i = 0; i < 100; i++) {
       car.drive();
     }
-    Assertions.assertEquals(true, car.batteryDrained());
+    Assertions.assertTrue(car.batteryDrained());
   }
 
   @Test
   public void nitro_car_has_battery_not_drained() {
     var car = NeedForSpeed.nitro();
-    Assertions.assertEquals(false, car.batteryDrained());
+    Assertions.assertFalse(car.batteryDrained());
   }
 
   @Test
@@ -35,7 +35,7 @@ class NeedForSpeedTest {
     int speed = 15;
     int batteryDrain = 3;
     var car = new NeedForSpeed(speed, batteryDrain);
-    Assertions.assertEquals(false, car.batteryDrained());
+    Assertions.assertFalse(car.batteryDrained());
   }
 
   @Test
@@ -45,7 +45,7 @@ class NeedForSpeedTest {
     var car = new NeedForSpeed(speed, batteryDrain);
     int distance = 16;
     var race = new RaceTrack(distance);
-    Assertions.assertEquals(false, race.tryFinishTrack(car));
+    Assertions.assertFalse(race.tryFinishTrack(car));
   }
 
   @Test
@@ -64,7 +64,7 @@ class NeedForSpeedTest {
     var car = new NeedForSpeed(speed, batteryDrain);
     int distance = 100;
     var race = new RaceTrack(distance);
-    Assertions.assertEquals(true, race.tryFinishTrack(car));
+    Assertions.assertTrue(race.tryFinishTrack(car));
   }
 
   @Test
@@ -86,10 +86,10 @@ class NeedForSpeedTest {
     for (var i = 0; i < 24; i++) {
       car.drive();
     }
-    Assertions.assertEquals(false, car.batteryDrained());
+    Assertions.assertFalse(car.batteryDrained());
     // Drain the battery
     car.drive();
-    Assertions.assertEquals(true, car.batteryDrained());
+    Assertions.assertTrue(car.batteryDrained());
   }
 
   @Test
@@ -99,7 +99,7 @@ class NeedForSpeedTest {
     var car = new NeedForSpeed(speed, batteryDrain);
     int distance = 20;
     var race = new RaceTrack(distance);
-    Assertions.assertEquals(true, race.tryFinishTrack(car));
+    Assertions.assertTrue(race.tryFinishTrack(car));
   }
 
   @Test
@@ -122,7 +122,7 @@ class NeedForSpeedTest {
     var car = new NeedForSpeed(speed, batteryDrain);
     int distance = 678;
     var race = new RaceTrack(distance);
-    Assertions.assertEquals(false, race.tryFinishTrack(car));
+    Assertions.assertFalse(race.tryFinishTrack(car));
   }
 
   @Test
@@ -134,6 +134,6 @@ class NeedForSpeedTest {
     for (var i = 0; i < 99; i++) {
       car.drive();
     }
-    Assertions.assertEquals(false, car.batteryDrained());
+    Assertions.assertFalse(car.batteryDrained());
   }
 }

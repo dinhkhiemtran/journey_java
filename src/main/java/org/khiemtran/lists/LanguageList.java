@@ -25,15 +25,16 @@ public class LanguageList {
   }
 
   public String firstLanguage() {
-    return languages.stream().findFirst().get();
+    var firstLanguage = languages.stream().findFirst();
+    return firstLanguage.orElse("");
   }
 
   public int count() {
-    return (int) languages.stream().count();
+    return languages.size();
   }
 
   public boolean containsLanguage(String language) {
-    return languages.stream().filter(e -> e.contains(language)).findFirst().isPresent();
+    return languages.stream().anyMatch(e -> e.contains(language));
   }
 
   public boolean isExciting() {

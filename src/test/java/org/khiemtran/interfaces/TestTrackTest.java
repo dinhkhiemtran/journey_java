@@ -14,7 +14,7 @@ class TestTrackTest {
   @Test
   public void experimentalRccIsRemoteControlCar() {
     ExperimentalRemoteControlCar experimentalCar = new ExperimentalRemoteControlCar();
-    Assertions.assertEquals(true, experimentalCar instanceof RemoteControlCar);
+    Assertions.assertTrue(experimentalCar instanceof RemoteControlCar);
   }
 
   @Test
@@ -68,7 +68,7 @@ class TestTrackTest {
   @Test
   public void productionRccIsRemoteControlCar() {
     ProductionRemoteControlCar productionCar = new ProductionRemoteControlCar();
-    Assertions.assertEquals(true, productionCar instanceof RemoteControlCar);
+    Assertions.assertTrue(productionCar instanceof RemoteControlCar);
   }
 
   @Test

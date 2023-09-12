@@ -9,7 +9,7 @@ public class Blackjack {
   private static final String HIT = "H";
   private static final String SPLIT = "P";
   private static final String WIN = "W";
-  private static Map<String, Integer> cards = new HashMap<>();
+  private static final Map<String, Integer> cards = new HashMap<>();
 
   static {
     cards.put("ace", 11);

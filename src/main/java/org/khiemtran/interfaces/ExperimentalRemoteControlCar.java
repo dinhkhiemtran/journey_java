@@ -1,7 +1,7 @@
 package org.khiemtran.interfaces;
 
 public class ExperimentalRemoteControlCar implements RemoteControlCar {
-  private int units;
+  private final int units;
   private int distanceTravelled;
 
   public ExperimentalRemoteControlCar() {

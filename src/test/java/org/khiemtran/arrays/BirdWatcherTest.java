@@ -18,13 +18,13 @@ class BirdWatcherTest {
   @Test
   public void itShouldNotHaveDaysWithoutBirds() {
     birdWatcher = new BirdWatcher(new int[]{1, 2, 5, 3, 7, 8, 4});
-    Assertions.assertEquals(false, birdWatcher.hasDayWithoutBirds());
+    Assertions.assertFalse(birdWatcher.hasDayWithoutBirds());
   }
 
   @Test
   public void itHasDayWithoutBirds() {
     birdWatcher = new BirdWatcher(new int[]{0});
-    Assertions.assertEquals(true, birdWatcher.hasDayWithoutBirds());
+    Assertions.assertTrue(birdWatcher.hasDayWithoutBirds());
   }
 
   @Test

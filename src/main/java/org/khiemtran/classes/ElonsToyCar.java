@@ -21,17 +21,17 @@ public class ElonsToyCar {
   }
 
   public String batteryDisplay() {
-    return !checkOutOfBattery() ? String.format("Battery at %s%%", battery) : STATE_OUT_OF_BATTERY;
+    return checkOutOfBattery() ? String.format("Battery at %s%%", battery) : STATE_OUT_OF_BATTERY;
   }
 
   public void drive() {
-    if (!checkOutOfBattery()) {
+    if (checkOutOfBattery()) {
       this.meters += DISTANCE_DRIVEN;
       this.battery--;
     }
   }
 
   private boolean checkOutOfBattery() {
-    return battery == RUN_OUT_OF_BATTERY;
+    return battery != RUN_OUT_OF_BATTERY;
   }
 }
