@@ -31,9 +31,10 @@ public class CalculatorConundrum {
   }
 
   private String divide(int operand1, int operand2) {
-    if (operand2 == 0) {
+    try {
+      return String.format("%s / %s = %s", operand1, operand2, operand1 / operand2);
+    } catch (Exception e) {
       throw new IllegalOperationException("Division by zero is not allowed", new ArithmeticException());
     }
-    return String.format("%s / %s = %s", operand1, operand2, operand1 / operand2);
   }
 }
