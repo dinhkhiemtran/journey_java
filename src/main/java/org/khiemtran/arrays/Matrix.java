@@ -16,7 +16,7 @@ public class Matrix {
         .toArray();
   }
 
-  public int[] getColumn(int columnNumber) {
+ public int[] getColumn(int columnNumber) {
     return Arrays.stream(matrixAsString.split("\n"))
         .mapToInt(str ->
             Integer.parseInt(str.split("\\s")[columnNumber - 1]))
