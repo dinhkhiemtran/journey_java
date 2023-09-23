@@ -37,8 +37,7 @@ public class Scrabble {
   }
 
   int getScore() {
-    return word
-        .chars()
+    return word.chars()
         .filter(words::containsKey)
         .map(words::get)
         .sum();

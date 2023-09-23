@@ -1,14 +1,13 @@
 package org.khiemtran.arrays;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class BirdWatcher {
   private static final int FIVE_BIRD_IN_DAY = 5;
-
   private static final int ZERO_BIRD_IN_DAY = 0;
   private final int[] birdsPerDay;
   private final int indexOfOldestDay;
-
 
   public BirdWatcher(int[] birdsPerDay) {
     this.birdsPerDay = birdsPerDay.clone();
@@ -28,7 +27,7 @@ public class BirdWatcher {
   }
 
   public boolean hasDayWithoutBirds() {
-    return Arrays.stream(birdsPerDay).filter(bird -> bird == ZERO_BIRD_IN_DAY).findFirst().isPresent();
+    return Arrays.stream(birdsPerDay).filter(bird -> Objects.equals(bird, ZERO_BIRD_IN_DAY)).findFirst().isPresent();
   }
 
   public int getCountForFirstDays(int numberOfDays) {
