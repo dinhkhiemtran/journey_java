@@ -14,7 +14,7 @@ public class Blackjack {
   static {
     cards.put("ace", 11);
     cards.put("two", 2);
-    cards.put("three", 3);
+    cards.put("th ree", 3);
     cards.put("four", 4);
     cards.put("five", 5);
     cards.put("six", 6);
