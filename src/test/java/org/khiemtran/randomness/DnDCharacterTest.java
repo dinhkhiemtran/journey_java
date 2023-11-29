@@ -1,6 +1,7 @@
-package org.khiemtran.lists;
+package org.khiemtran.randomness;
 
 import org.junit.jupiter.api.Test;
+import org.khiemtran.randomness.DnDCharacter;
 
 import java.util.List;
 

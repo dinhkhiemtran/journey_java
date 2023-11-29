@@ -1,7 +1,8 @@
-package org.khiemtran.strings;
+package org.khiemtran.randomness;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.khiemtran.randomness.Robot;
 
 import java.util.HashSet;
 import java.util.Set;

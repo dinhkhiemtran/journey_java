@@ -1,4 +1,4 @@
-package org.khiemtran.strings;
+package org.khiemtran.randomness;
 
 import java.util.HashSet;
 import java.util.Random;

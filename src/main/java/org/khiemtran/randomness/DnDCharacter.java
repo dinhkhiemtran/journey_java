@@ -1,4 +1,4 @@
-package org.khiemtran.lists;
+package org.khiemtran.randomness;
 
 import java.util.List;
 import java.util.Random;

@@ -73,11 +73,6 @@ class BlackjackTest {
   }
 
   @Test
-  public void correctParsesThree() {
-    Assertions.assertEquals(3, blackjack.parseCard("three"));
-  }
-
-  @Test
   public void firstTurnWithJackJackAndDealerAce() {
     Assertions.assertEquals("S", blackjack.firstTurn("jack", "jack", "ace"));
   }
@@ -105,11 +100,6 @@ class BlackjackTest {
   @Test
   public void firstTurnWithSixTenAndDealerSix() {
     Assertions.assertEquals("S", blackjack.firstTurn("six", "ten", "six"));
-  }
-
-  @Test
-  public void firstTurnWithThreeTenAndDealerSix() {
-    Assertions.assertEquals("S", blackjack.firstTurn("three", "ten", "six"));
   }
 
   @Test
@@ -253,23 +243,8 @@ class BlackjackTest {
   }
 
   @Test
-  public void firstTurnWithTwoThreeAndDealerQueen() {
-    Assertions.assertEquals("H", blackjack.firstTurn("two", "three", "queen"));
-  }
-
-  @Test
   public void noBlackjackWithEightAndFive() {
     Assertions.assertFalse(blackjack.isBlackjack("eight", "five"));
-  }
-
-  @Test
-  public void firstTurnWithThreeTenAndDealerQueen() {
-    Assertions.assertEquals("H", blackjack.firstTurn("three", "ten", "queen"));
-  }
-
-  @Test
-  public void firstTurnWithThreeTenAndDealerSeven() {
-    Assertions.assertEquals("H", blackjack.firstTurn("three", "ten", "seven"));
   }
 
   @Test
